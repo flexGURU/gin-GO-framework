@@ -14,11 +14,22 @@ func main() {
 
 	router := gin.Default()
 
-	// Router
-	router.GET("/getData", handlers.GetData)
-	router.POST("/postData", handlers.PostData)
-	router.POST("/getQS", handlers.GetQueryString)
-	router.GET("/getQueryParams/:name/:age", handlers.GetQueryParams)
+	// Subrouting and using Router Gropus
+	// admin routes
+	admin := router.Group("/admin")
+	{
+		admin.GET("/getData", handlers.GetData)
+	}
+
+	// client routes
+
+	client := router.Group("/client")
+	{
+		client.POST("/postData", handlers.PostData)
+		client.POST("/getQS", handlers.GetQueryString)
+		client.GET("/getQueryParams/:name/:age", handlers.GetQueryParams)
+	}
+	
 
 
 	server := http.Server{

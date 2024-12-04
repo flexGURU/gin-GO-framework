@@ -3,13 +3,14 @@ package handlers
 import (
 	"fmt"
 	"io"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 // Handler function to get serve the GET request /getData
 func GetData(ctx *gin.Context) {
-	ctx.JSON(200, gin.H{
+	ctx.JSON(http.StatusOK, gin.H{
 		"data": "here is the data",
 	})
 }
@@ -21,7 +22,7 @@ func PostData(ctx *gin.Context) {
 	body := ctx.Request.Body
 	value, _ := io.ReadAll(body)
 
-	ctx.JSON(200, gin.H{
+	ctx.JSON(http.StatusOK, gin.H{
 		"data": fmt.Sprintf("%s", value),
 	})
 }
@@ -33,7 +34,7 @@ func GetQueryString(ctx *gin.Context) {
 	name := ctx.Query("name")
 	age := ctx.Query("age")
 
-	ctx.JSON(200, gin.H{
+	ctx.JSON(http.StatusOK, gin.H{
 		"data": fmt.Sprintf("values are name: %s and age: %s", name, age),
 	})
 }
@@ -44,7 +45,7 @@ func GetQueryParams(ctx *gin.Context) {
 	name := ctx.Param("name")
 	age := ctx.Param("age")
 
-	ctx.JSON(200, gin.H{
+	ctx.JSON(http.StatusOK, gin.H{
 		"data": fmt.Sprintf("values are name: %s and age: %s", name, age),
 	})
 
