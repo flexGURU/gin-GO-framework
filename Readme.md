@@ -21,7 +21,7 @@
     ### Checks if the request made to the endpoint above /getData has Token: Auth and raises a status Unauthorised if False
 
     2. Logging :
-    ### Used LogRus for logging [./middleware/middleware.go/LoggingMidd](./middleware/middleware.go/LoggingMidd)
+    ### Used LogRus for logging [./middleware/middleware.go](./middleware/middleware.go)
 
 
 
