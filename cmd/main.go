@@ -5,20 +5,35 @@ import (
 	"time"
 
 	"girhub.com/flexGURU/go-gin/handlers"
+	"girhub.com/flexGURU/go-gin/middleware"
 	"github.com/gin-gonic/gin"
+	"github.com/sirupsen/logrus"
 )
 
+func init()  {
+	logrus.SetFormatter(&logrus.TextFormatter{
+		ForceColors: true,
 
+		})
+	logrus.SetLevel(logrus.DebugLevel)
+	
+}
 
 func main() {
 
-	router := gin.Default()
+
+
+	router := gin.New()
+
+
+	// Printing using logrus
+	router.Use(middleware.LoggingMidd())
 
 	// Subrouting and using Router Gropus
 	// admin routes
 	admin := router.Group("/admin")
 	{
-		admin.GET("/getData", handlers.GetData)
+		admin.GET("/getData", middleware.AuthenticationMiddleware(), middleware.AddHeader, handlers.GetData)
 	}
 
 	// client routes

@@ -10,6 +10,9 @@ import (
 
 // Handler function to get serve the GET request /getData
 func GetData(ctx *gin.Context) {
+
+
+	// Logrus 
 	ctx.JSON(http.StatusOK, gin.H{
 		"data": "here is the data",
 	})

@@ -1,0 +1,35 @@
+{
+  "file": "/mnt/c/Users/admin/Desktop/Golang/Gin Framework/middleware/middleware.go:65",
+  "func": "main.main.LoggingMidd.func1",
+  "level": "info",
+  "msg": "info",
+  "time": "2024-12-06T09:27:06+03:00"
+}
+{
+  "file": "/mnt/c/Users/admin/Desktop/Golang/Gin Framework/middleware/middleware.go:66",
+  "func": "main.main.LoggingMidd.func1",
+  "level": "trace",
+  "msg": "trace",
+  "time": "2024-12-06T09:27:06+03:00"
+}
+{
+  "file": "/mnt/c/Users/admin/Desktop/Golang/Gin Framework/middleware/middleware.go:67",
+  "func": "main.main.LoggingMidd.func1",
+  "level": "debug",
+  "msg": "debug",
+  "time": "2024-12-06T09:27:06+03:00"
+}
+{
+  "file": "/mnt/c/Users/admin/Desktop/Golang/Gin Framework/middleware/middleware.go:69",
+  "func": "main.main.LoggingMidd.func1",
+  "level": "warning",
+  "msg": "warning",
+  "time": "2024-12-06T09:27:06+03:00"
+}
+{
+  "file": "/mnt/c/Users/admin/Desktop/Golang/Gin Framework/middleware/middleware.go:70",
+  "func": "main.main.LoggingMidd.func1",
+  "level": "error",
+  "msg": "error",
+  "time": "2024-12-06T09:27:06+03:00"
+}
