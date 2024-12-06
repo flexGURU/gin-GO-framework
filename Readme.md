@@ -2,7 +2,7 @@
 
 ## Contents
 - Handlers
-- Middleware - Logrus ["github.com/sirupsen/logrus"]("github.com/sirupsen/logrus")
+- Middleware - Logrus [https://github.com/sirupsen/logrus/](https://github.com/sirupsen/logrus/)
 
 ## Features:
 - Route Grouping: [./routes/routes.go](./routes/routes.go)
